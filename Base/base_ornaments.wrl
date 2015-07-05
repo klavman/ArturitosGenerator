@@ -1,0 +1,123 @@
+#VRML V2.0 utf8 
+
+########## FUTURISC VISOR.
+
+Transform	{
+	translation	0 18 2.5
+
+	children [
+		Shape{ appearance Appearance { material Material {
+		# Color neon de internet
+			diffuseColor 0 0 0 emissiveColor 1 0 0 ambientIntensity 0 specularColor 0.9 0.9 0.9 shininess 0.05 #texture_monster
+
+		}}
+			geometry Box {
+				#body_type			
+			}
+	
+	}]
+
+}	
+
+########## SPIKES: ADORNO 2
+
+DEF	GRUPO-ADORNO1 Group	{
+
+	children [
+
+DEF ADORNO1 Transform  {
+	#spikes_body_t 
+	rotation 1 0 0 2.0944
+	children [
+		 Shape{ appearance Appearance { material Material {
+		 	 specularColor 0.78 0.69 0.5
+			 diffuseColor 0.5 0.15 0
+			 ambientIntensity 0
+			 shininess 0.12
+		 }}
+
+			geometry Cone {
+				#spikes_body_h
+				bottomRadius 0.5
+
+			}
+		}
+
+	]}
+
+Transform { rotation 0 1 0 0.3491 children [ USE ADORNO1 ]}
+
+Transform { rotation 0 1 0 -0.3491 children [ USE ADORNO1 ]}
+
+Transform { rotation 0 1 0 0.6981 children [ USE ADORNO1 ]}
+
+Transform { rotation 0 1 0 -0.6981 children [ USE ADORNO1 ]}
+
+]} # Fin Grupo
+
+
+Transform {
+	rotation 0 1 0 3.1416
+	children [
+
+		USE	GRUPO-ADORNO1
+	]}
+
+
+########## HORNS: ADORNO 2
+
+Transform {
+	translation	4 18 0
+	scale 0.2 0.2 0.2
+
+	children 
+		DEF HORN Shape{ appearance Appearance { material Material {
+			diffuseColor 0.04 0.04 0.04
+			specularColor 0.45 0.43 0.62
+			ambientIntensity 0.01
+			shininess 0.06
+			emissiveColor 0.1 0.1 0.1
+		}}
+			geometry Extrusion{
+					creaseAngle 1.3491
+					crossSection [ 
+						 0 -4,
+
+					    
+						-4 0, 
+
+					    
+						 0 4,
+						 
+						 
+						 4 0, 
+
+	 
+						 0 -4
+					 ]
+					
+					 spine [ 0 0 0, 2 0 0, 3 0 0, 5 0 0, 7 5 0, 
+
+					 7 8 0, 7 9 0 #horn_body
+
+					 ]
+
+					 scale  [ 0.9 0.9,  0.9 0.9, 0.8 0.8, 0.6 0.6, 0.3 0.3, 0.1 0.1, 0 0 ] 
+					 
+
+			} 
+		} 
+
+}
+
+Transform {
+	rotation 0 1 0 3.1416
+	translation	-4 18 0
+
+	scale 0.2 0.2 0.2
+
+	children[
+		USE HORN
+	]
+
+}

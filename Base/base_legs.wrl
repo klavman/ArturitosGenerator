@@ -1,0 +1,160 @@
+#VRML V2.0 utf8 
+Transform {
+
+	children [
+		Transform {
+
+
+			#rotation_legs
+
+			#scale_monster
+
+			children [
+
+		DEF LEG Shape{ appearance Appearance { material Material {
+			shininess 0.9 diffuseColor 0.39 0.38 0.32 specularColor 0.8 1 0.9 ambientIntensity 0.3 #texture_monster
+		}}
+			geometry Extrusion{
+					creaseAngle 0.3491
+					crossSection [ 
+						 0 -4,
+
+						-1.0 -3.86,
+						-2.0 -3.45,
+						-2.8 -2.8,
+						-3.45 -2.0,
+						-3.86 -1.0,
+					    
+						-4 0,
+
+						-3.86 1.0,
+						-3.45 2.0,
+ 						-2.8 2.8,
+						-2.0 3.45,
+						-1.0 3.86,
+					    
+						 0 4,
+						 
+						1.0 3.86,
+						2.0 3.45,
+						2.8 2.8,
+						3.45 2.0,
+						3.86 1.0,
+						 
+						 4 0,
+
+						3.86 -1.0,
+						3.45 -2.0,
+						2.8 -2.8,	
+   						2.0 -3.45,					 
+						1.0 -3.86,
+	 
+						 0 -4
+					 ]
+					
+					spine [1 5 0,   5 5 0,    5 5 0,  5.5 5 0,   6 5 0,   7 5 0, 
+
+					9.0 5 0, #length_legs
+
+					10.0 4 0, #length_legs   
+
+					10.5 3.5 0, #length_legs 
+
+					11.0 3 0, #length_legs  
+
+					11.5 2.5 0, #length_legs  
+
+					11.7 2 0, #length_legs 
+
+					12.0 0 0 #length_legs
+
+					] 
+
+					scale [0.3 0.3, 0.5 0.5,   0.8 0.6, 0.8 0.8,   0.6 0.5, 0.5 0.7   0.3 0.5 0.3 0.5 0.3 0.5,  0.3 0.3,   0.3 0.3,  0.3 0.3, 
+
+					0.0 0.0 #ground_type
+
+					]
+
+					beginCap FALSE
+					creaseAngle 0.45
+					
+			} 
+		}
+		]}
+	] 
+
+}
+
+Transform {
+
+	rotation 0 1 0 3.1416
+
+	children[
+
+		Transform {
+
+			#rotation_legs
+
+			#scale_monster
+
+			children [
+
+			USE	LEG
+		]}
+
+	]
+
+
+}
+
+Transform {			 
+
+	#trans_leg_back
+
+	rotation 0 1 0 1.5708 
+
+	children[
+
+		Transform {
+
+			#rotation_legs
+
+			#scale_monster
+
+			children [
+
+			USE	LEG
+		]}
+	]
+
+
+}
+
+
+Transform {
+
+	rotation 0 1 0 4.7124 
+
+	children[
+
+		Transform {
+		
+			#rotation_legs 
+
+			#leg_front
+
+			#scale_monster
+			
+			children [
+
+			USE	LEG
+		]
+	}
+	]
+
+
+}
+
+
+

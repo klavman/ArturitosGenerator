@@ -1,0 +1,43 @@
+#VRML V2.0 utf8 
+
+
+# Durante el desarrollo de las fases deben ir nodos viewpoint, navigationInfo, DirectionalLight...
+
+NavigationInfo {
+ 
+    headlight TRUE
+    speed 1.0
+    type "EXAMINE"
+}
+
+# Para probar mejor desactivar headlight
+
+# DirectionalLight{
+# 	ambientIntensity 0.5
+# 	intensity 0.5
+# 	direction 0 1 0
+# }
+
+Viewpoint {
+         position    10 12 40
+         orientation 0 1 0 0.3491
+         description "view all"
+}
+
+Viewpoint {
+         position    30 10 10
+         orientation 0 1 0 1.3491
+         description "side"
+}
+
+Viewpoint {
+         position    0 10 -40
+         orientation 0 1 0 3.1416
+         description "back"
+}
+
+Viewpoint {
+         position    0 -30 5
+         orientation 1 0 0 1.408
+         description "bottom"
+}

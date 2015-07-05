@@ -1,0 +1,56 @@
+#VRML V2.0 utf8
+
+Transform {
+	rotation  1 0 0 0.7 #pos_lanza_rot
+	translation	-11 8 7.5 #pos_lanza_tras
+	scale 2 2 2
+
+	children 
+
+		DEF LANZA Shape{ appearance Appearance { material Material {
+			diffuseColor .04 .04 .04
+			specularColor .45 .43 .62
+			ambientIntensity .01
+			shininess .06
+			emissiveColor .1 .1 .1
+		}}
+			geometry Extrusion{
+
+					crossSection [ 
+						 0 -4,
+
+						-1.0 -3.86,
+
+						-3.86 -1.0,
+					    
+						-4 0,
+
+						-3.86 1.0,
+
+						-1.0 3.86,
+					    
+						 0 4,
+						 
+						1.0 3.86,
+
+						3.86 1.0,
+						 
+						 4 0,
+
+						3.86 -1.0,
+					 
+						1.0 -3.86,
+	 
+						 0 -4
+					 ]
+					
+				spine [0 -8.0 0, 0 -7.0 0, 0 -4.5 0, 0 -3.0 0, 0 -1.5 0, 0 -0.5 0, 0 -0.3 0, 0 -0.1 0, 0 0 0, 0 0.1 0,	0 0.3 0,	0 0.5 0,	0 1.5 0,	0 3.0 0, 0 4.5 0,	0 7.0 0, 0 8.0 0]
+
+				scale  [0 0, 0.03 0.03, 0.05 0.05, 0.1 0.1, 0.1 0.1, 0.1 0.1, 0.07 0.07, 0.05 0.05, 0.05 0.05,  0.05 0.05,	0.07 0.07,	0.1 0.1,  	0.1 0.1,	0.1 0.1, 0.05 0.05,	0.03 0.03, 0 0] 
+					 
+					 creaseAngle 0.80
+					
+			} 
+		} 
+
+}

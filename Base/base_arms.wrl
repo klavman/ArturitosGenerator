@@ -1,0 +1,89 @@
+#VRML V2.0 utf8 
+	
+Transform {
+		#pos_type_right
+		translation 11 15 0 #trans_type_right
+		children [
+			Transform {
+				#pos2_type_right
+				translation -11 -15 0 #trans2_type_right
+	children 
+
+		DEF ARM Shape{ appearance Appearance { material Material {
+			shininess 0.9 diffuseColor 0.39 0.38 0.32 specularColor 0.8 1 0.9 ambientIntensity 0.3 #texture_monster
+
+		}}
+			geometry Extrusion{
+					creaseAngle 1.3491
+					crossSection [ 
+						 0 -4,
+
+						-1.0 -3.86,
+						-2.0 -3.45,
+						-2.8 -2.8,
+						-3.45 -2.0,
+						-3.86 -1.0,
+					    
+						-4 0,
+
+						-3.86 1.0,
+						-3.45 2.0,
+ 						-2.8 2.8,
+						-2.0 3.45,
+						-1.0 3.86,
+					    
+						 0 4,
+						 
+						1.0 3.86,
+						2.0 3.45,
+						2.8 2.8,
+						3.45 2.0,
+						3.86 1.0,
+						 
+						 4 0,
+
+						3.86 -1.0,
+						3.45 -2.0,
+						2.8 -2.8,	
+   						2.0 -3.45,					 
+						1.0 -3.86,
+	 
+						 0 -4
+					 ]
+					
+					 spine [5 15 0,   7 15 0,	7.5 15 0,	8.5 15 0,  11 13.5 0,  11 10 0,	11 7 0,		11 7 0,    11 6.5 0,     11 6.5 0, 11 5.5 0,  11 5.5 0,  11 5 0]
+
+					 scale [0.2 0.2, 0.3 0.3,	0.4 0.4,	0.4 0.4,   0.4 0.4,    0.4 0.4,  0.1 0.1,    0.45 0.45   0.45 0.45,  0.3 0.3,   0.3 0.3,  0.2 0.2,   0.2 0.2]
+
+					 orientation [ 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,    1 0 0 -1.0472, 0 0 0 0, 0 0 0 0,  0 0 0 0,    0 0 0 0,	0 0 0 0,]
+
+					 endCap	FALSE
+			} 
+		} 
+
+}]
+
+}
+
+
+
+Transform {
+
+		rotation 0 1 0 3.1416 #posZero_type_left
+		children
+
+	Transform {
+		#pos_type_left
+		translation 11 15 0
+		children [
+			Transform {
+				translation -11 -15 0
+				children [
+				 USE ARM
+				]
+			}
+	
+		]}
+
+}
+
